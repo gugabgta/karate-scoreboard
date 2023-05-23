@@ -1,4 +1,21 @@
 .App {
   text-align: center;
   background-color: #27374D;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+
+@font-face {
+    font-family: "7-Segment";
+    src: local("7-Segment"),
+        url("./fonts/7seg/7seg.ttf") format("truetype");
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
 }

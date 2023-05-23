@@ -1,0 +1,47 @@
+.penalties button {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    border: none;
+    transition: all 0.3s ease 0s;
+    box-shadow:
+        0px 0px 1px #fff,
+        0px 0px 2px #fff,
+        0px 0px 5px #ff6600,
+        0px 0px 7px #ff6600,
+        0px 0px 9px #ff6600,
+        0px 0px 5px #ff6600 inset,
+        0px 0px 7px #ff6600 inset,
+        0px 0px 9px #ff6600 inset;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 9px #ff6600,
+        0 0 11px #ff6600,
+        0 0 13px #ff6600;
+}
+
+.penalties button:hover {
+    background-color: #ff6600a0;
+    cursor: pointer;
+}
+
+.active {
+    /* background-color: #ff6600cd !important; */
+    /* oposite of orange */
+    color: black !important;
+    text-shadow:
+        0 0 2px lightgrey,
+        0 0 4px lightgrey,
+        0 0 9px #00ff66,
+        0 0 14px #00ff66,
+        0 0 18px #00ff66,
+        0 0 25px #00ff66,
+        0 0 30px #00ff66,
+        0 0 35px #00ff66 !important;
+}
