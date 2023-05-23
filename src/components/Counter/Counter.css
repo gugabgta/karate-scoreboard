@@ -1,0 +1,20 @@
+.counter input {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    height: 160px;
+    width: 160px;
+    font-size: 80px;
+}
+
+.glow-red {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #e60073, 0 0 13px #e60073, 0 0 15px #e60073;
+}
+
+.glow-blue {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 3px #fff, 0 0 5px #fff, 0 0 10px #00b3e6, 0 0 13px #00b3e6, 0 0 15px #00b3e6;
+}
