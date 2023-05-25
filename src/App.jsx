@@ -1,9 +1,13 @@
 import { useState, useEffect, useRef } from 'react';
 import './App.css';
-import Container from './components/Container';
 import Counter from './components/Counter';
 import Timer from './components/Timer';
 import Penalties from './components/Penalties';
+import TimerControls from './components/TimerControls';
+
+function noLessThanZero(value) {
+    return value <= 0 ? 0 : value
+}
 
 function App() {
 
@@ -12,41 +16,51 @@ function App() {
     const [time, setTime] = useState(180)
     const [aka_penalties, setAkaPenalties] = useState(0)
     const [ao_penalties, setAoPenalties] = useState(0)
+    const [is_running, setIsRunning] = useState(false)
     let interval = useRef(null)
-    let isRunning = useRef(false)
 
     const startTimer = () => {
-        isRunning.current = true
-        setTime((prevTime) => prevTime - 1)
+        setIsRunning(true)
     }
 
     useEffect(() => {
-        if (isRunning.current) {
+        if (is_running) {
             interval.current = setInterval(() => {
                 setTime((time) => time - 1);
             }, 1000);
         }
         return () => clearInterval(interval.current);
-    }, [time]);
+    }, [time, is_running]);
 
     const stopTimer = () => {
-        isRunning.current = false
+        setIsRunning(false)
         clearInterval(interval.current)
     }
 
-    const resetTimer = () => {
+    const reset = () => {
         clearInterval(interval.current)
-        isRunning.current = false
+        setAkaCounter(0)
+        setAoCounter(0)
+        setAkaPenalties(0)
+        setAoPenalties(0)
         setTime(180)
+        setIsRunning(false)
     }
 
     return (
         <div className="App">
-            <Container>
+            <div className="timer-controls">
+                <TimerControls
+                    start={startTimer}
+                    stop={stopTimer}
+                    reset={reset}
+                />
+            </div>
+            <div className='container'>
                 <div className='score'>
                     <Counter
-                        sum={() => setAkaCounter(aka_counter + 1)}
-                        sub={() => setAkaCounter(aka_counter - 1)}
+                        sum={() => setAkaCounter(noLessThanZero(aka_counter + 1))}
+                        sub={() => setAkaCounter(noLessThanZero(aka_counter - 1))}
                         color="red"
                         value={aka_counter}
                     />
@@ -55,25 +69,20 @@ function App() {
                         flags={aka_penalties}
                     />
                 </div>
-                <Timer
-                    start={() => startTimer(setTime)}
-                    stop={() => stopTimer()}
-                    reset={() => resetTimer()}
-                    edit={() => setTime(2)}
-                    value={time}
-                />
+                <Timer value={time} />
                 <div className='score'>
                     <Counter
-                        sum={() => setAoCounter(ao_counter + 1)}
-                        sub={() => setAoCounter(ao_counter - 1)}
+                        sum={() => setAoCounter(noLessThanZero(ao_counter + 1))}
+                        sub={() => setAoCounter(noLessThanZero(ao_counter - 1))}
                         color="blue"
                         value={ao_counter}
                     />
                     <Penalties
                         setFlag={(flag) => setAoPenalties(ao_penalties ^ flag)}
-                        flags={ao_penalties}/>
+                        flags={ao_penalties}
+                    />
                 </div>
-            </Container>
+            </div>
         </div>
     );
 }

@@ -1,7 +1,5 @@
 .counter span {
-    height: 160px;
-    width: 160px;
-    font-size: 80px;
+    font-size: 8rem;
     font-family: '7-Segment', sans-serif;
     display: flex;
     justify-content: center;
@@ -12,9 +10,7 @@
     background: transparent;
     border: none;
     box-shadow: none;
-    height: 80px;
-    width: 80px;
-    font-size: 80px;
+    font-size: 5rem;
 }
 
 .vertical {
@@ -27,11 +23,21 @@
 .glow-red {
     color: #fff;
     text-align: center;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 9px #e60073, 0 0 11px #e60073, 0 0 13px #e60073;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 9px #e60073,
+        0 0 11px #e60073,
+        0 0 13px #e60073;
 }
 
 .glow-blue {
     color: #fff;
     text-align: center;
-    text-shadow: 0 0 2px #fff, 0 0 4px #fff, 0 0 9px #00b3e6, 0 0 11px #00b3e6, 0 0 13px #00b3e6;
+    text-shadow:
+        0 0 2px #fff,
+        0 0 4px #fff,
+        0 0 9px #00b3e6,
+        0 0 11px #00b3e6,
+        0 0 13px #00b3e6;
 }

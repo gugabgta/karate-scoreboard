@@ -1,24 +1,16 @@
 import './Timer.css'
 
 function seconds(seconds) {
-    const sec = `${String(seconds % 60).padStart(2, '0')}`
-    return sec
+    return `${String(seconds % 60).padStart(2, '0')}`
 }
 
 function minutes(seconds) {
-    const min = `${String(Math.floor(seconds / 60)).padStart(2, '0')}`
-    return min
+    return `${String(Math.floor(seconds / 60)).padStart(2, '0')}`
 }
 
 const Timer = (props) => {
     return (
         <div className="timer">
-            <div className="timer-controls">
-                <button type="button" onClick={props.start}> Start </button>
-                <button type="button" className="" onClick={props.stop}> Stop </button>
-                <button type="button" className="" onClick={props.reset}> Reset </button>
-                <button type="button" className="" onClick={props.edit}> Edit </button>
-            </div>
             <span className="glow">
                 <span className="segment-font">{minutes(props.value)}</span>
                 <span className="normal-font">:</span>
