@@ -4,6 +4,7 @@ import Counter from './components/Counter';
 import Timer from './components/Timer';
 import Penalties from './components/Penalties';
 import TimerControls from './components/TimerControls';
+import Settings from './components/Settings';
 
 function noLessThanZero(value) {
     return value <= 0 ? 0 : value
@@ -83,6 +84,7 @@ function App() {
                     />
                 </div>
             </div>
+            <Settings />
         </div>
     );
 }

@@ -3,6 +3,7 @@
   background-color: #27374D;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
 }
 
 .timer-controls {

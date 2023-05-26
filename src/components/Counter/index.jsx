@@ -1,6 +1,5 @@
 import './Counter.css'
 
-
 const Counter = (props) => {
     const padValue = (value) => {
         return String(value).padStart(2, '0')
