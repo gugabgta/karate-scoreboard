@@ -10,11 +10,17 @@
     height: 100%;
 }
 
-.settings button {
+.settings > button {
     width: 4.5rem;
     height: 4.5rem;
     background-color: transparent;
     border: none;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
 }
 
 @keyframes spin-animation {
@@ -51,7 +57,7 @@
     flex-shrink: 0;
     visibility: hidden;
     position: absolute;
-    bottom: -1rem;
+    /* bottom: -1rem; */
     left: 100px;
     z-index: 1;
     background-color: #fff;
@@ -60,14 +66,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    /* padding: 20px; */
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
-    animation: shrink-animation 0.2s linear;
-    /* animation: shrink-animation 0.2s ease-in-out; */
+    animation: shrink-animation 2.2s linear;
+    /* animation: shrink-animation 2.2s ease-in-out; */
     transition: all 0.5s ease 0s;
 }
 
 .settings-popover:not(:hover) {
     animation: shrink-animation 0.2s linear;
+}
+
+.settings-popover button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.5s ease 0s;
 }

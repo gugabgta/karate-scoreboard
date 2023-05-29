@@ -50,7 +50,7 @@ function App() {
 
     return (
         <div className="App">
-            <div className="timer-controls">
+            {/* <div className="timer-controls">
                 <TimerControls
                     start={startTimer}
                     stop={stopTimer}
@@ -83,7 +83,7 @@ function App() {
                         flags={ao_penalties}
                     />
                 </div>
-            </div>
+            </div> */}
             <Settings />
         </div>
     );
