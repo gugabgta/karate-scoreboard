@@ -1,0 +1,9 @@
+.glow-red {
+    color: red;
+    text-shadow: 0 0 10px red;
+}
+
+.glow-blue {
+    color: blue;
+    text-shadow: 0 0 10px blue;
+}

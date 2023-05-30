@@ -2,7 +2,6 @@ import './Settings.css'
 import cogs from './setting-line-icon.svg'
 
 const Settings = (props) => {
-    // props.items = props.items ?? []
     return (
         <div className="settings">
             <button class="settings-icon">
