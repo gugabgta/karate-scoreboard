@@ -34,10 +34,10 @@ ul {
 
 @keyframes shrink-animation {
     from {
-      transform: scale(1);
+      transform: scaleY(1);
     }
     to {
-      transform: scale(0);
+      transform: scaleY(0);
     }
 }
 
@@ -69,14 +69,12 @@ ul {
     /* padding: 20px; */
     border-radius: 10px;
     box-shadow: 0 0 10px #000;
-    animation: shrink-animation 2.2s linear;
-    /* animation: shrink-animation 2.2s ease-in-out; */
     transition: all 0.5s ease 0s;
 }
 
-.settings-popover:not(:hover) {
-    animation: shrink-animation 0.2s linear;
-}
+/* .settings-popover:not(:hover) {
+    animation: shrink-animation 2.2s linear;
+} */
 
 .settings-popover button {
     width: 100%;

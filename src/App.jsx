@@ -48,6 +48,17 @@ function App() {
         setIsRunning(false)
     }
 
+    const settings = [
+        {
+            on_click: fn => alert('eiii'),
+            title: 'Botao 1'
+        },
+        {
+            on_click: fn => alert('houu'),
+            title: 'Botao 2'
+        },
+    ]
+
     return (
         <div className="App">
             {/* <div className="timer-controls">
@@ -84,7 +95,7 @@ function App() {
                     />
                 </div>
             </div> */}
-            <Settings />
+            <Settings items={settings}/>
         </div>
     );
 }
