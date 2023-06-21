@@ -70,7 +70,9 @@ function App() {
                         flags={aka_penalties}
                     />
                 </div>
-                <Timer value={time} />
+                <div className='time'>
+                    <Timer value={time} />
+                </div>
                 <div className='score'>
                     <Counter
                         sum={() => setAoCounter(noLessThanZero(ao_counter + 1))}
